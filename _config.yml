@@ -1,4 +1,4 @@
-title:            Site Title
+title:            CSESoc Beta
 description:      Describe your website here.
 disqus_shortname: 
 reading_time:     true
@@ -9,16 +9,16 @@ url:
 
 # Owner/author information
 owner:
-  name:           Your Name
+  name:           CSESoc UNSW
   avatar:         avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good sentence or two should suffice."
   email:          you@email.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        
-  facebook:       
-  github:         
+  twitter:      https://twitter.com/csesoc  
+  facebook:     https://www.facebook.com/csesoc/  
+  github:       https://github.com/csesoc  
   stackexchange:  
-  linkedin:       
+  linkedin:     https://www.linkedin.com/company/csesoc  
   instagram:      
   flickr:         
   tumblr:         
