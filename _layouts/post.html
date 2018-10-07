@@ -41,7 +41,9 @@
     </header>
     <div class="entry-content">
       {% if page.author-img %}
-        <img src="../images/authors/{{page.author-img | default: 'csesoc.jpg'}}" alt="{{page.author}}" class="author-pic">
+      <img src="../images/authors/{{ page.author-img }}" alt="{{ page.author }}" class="author-pic">
+      {% else %}
+      <img src="/images/authors/csesoc.jpg" alt="CSESoc UNSW" class="author-pic">
       {% endif %}
       <h1 class="entry-title"><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
       <span class="entry-date date published updated"><time datetime="{{ page.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ page.url }}">{{ page.date | date: "%B %d, %Y" }} by {{ page.author | default: "CSESoc UNSW" }}</a></time></span></span>

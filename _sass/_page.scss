@@ -25,6 +25,8 @@ body {
 .entry-content {
 	@include font-size(16);
 
+	margin-top: 1em;
+
 	// Dotted line underlines for links
 	p > a,
 	li > a {
@@ -56,6 +58,7 @@ body {
 	position: relative;
 }
 .author-pic {
+	border-radius: 50%;
 	width:5em;
 	float:right;
 	margin-left:1em
@@ -479,15 +482,15 @@ header .entry-meta {
 		// box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.1);
 		border-radius: 3px;
 		margin-bottom: 20px;
-		padding: 25px 15px;
+		padding: 0px 15px;
 
 		@media #{$medium} {
-			padding: 30px;
+			padding: 0px 30px;
 		}
 
 		@media #{$large} {
 			margin-bottom: 30px;
-			padding: 50px 80px;
+			padding: 0px 80px;
 		}
 	}
 }

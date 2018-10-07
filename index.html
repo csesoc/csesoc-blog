@@ -11,16 +11,22 @@ image:
 {% for post in paginator.posts %}
 <article class="hentry">
   <header>
-    <!-- {% if post.author-img %} -->
-      <img src="/images/authors/{{post.author-img | default: 'csesoc.jpg'}}" alt="{{post.author}}" class="author-pic">
-    <!-- {% endif %} -->
+    {% if post.author-img %}
+    <img src="/images/authors/{{ post.author-img }}" alt="{{ post.author }}" class="author-pic">
+    {% else %}
+    <img src="/images/authors/csesoc.jpg" alt="CSESoc UNSW" class="author-pic">
+    {% endif %}
     <h1 class="entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h1>
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn">{{ post.author | default: "CSESoc UNSW"}}</span></span>
+      {% if site.reading_time %}
+        <span class="entry-date date published updated"><time datetime="{{ post.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a></time></span><span class="author vcard"><span class="fn">{{ post.author | default: "CSESoc UNSW"}} | </span>
+        <i class="fa fa-clock-o"></i>{% include read-time-index.html %}
+      {% endif %}
+      </span>
       {% if site.reading_time %}
       <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        {% include read-time-index.html %}
+        <!-- <i class="fa fa-clock-o"></i>
+        {% include read-time-index.html %} -->
       </span><!-- /.entry-reading-time -->
       {% endif %}
     </div><!-- /.entry-meta -->
